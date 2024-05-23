@@ -17,3 +17,6 @@ const products = [
 // forEach
 provinces.forEach((province) => console.log(province));
 names.forEach((name) => console.log(name));
+
+names.forEach((name, index) => console.log(`${name} (${provinces[index]})`)); // Assuming a matching index for names and provinces
+
