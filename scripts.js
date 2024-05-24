@@ -105,3 +105,22 @@ Price Manipulation - Filters the products array to include only products price i
   products.reduce((productNames, product) => {
     return productNames.concat(product.product);
   }, ``),
+
+    /* 
+  Find Extremes in Prices - Finds the highest and lowest prices in the products array using the reduce method. 
+  It initializes an object with Highest and Lowest properties set to undefined, and 
+  then updates these properties with the maximum and minimum values of the price property, respectively
+  */
+  products.reduce(
+    (results, product) => {
+      const price = parseInt(product.price);
+      if (price) {
+        results.Highest = Math.max(results.Highest || 0, price);
+      }
+      if (price) {
+        results.Lowest = Math.min(results.Lowest || Infinity, price);
+      }
+      return results;
+    },
+    { Highest: undefined, Lowest: undefined }
+  ),
