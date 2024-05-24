@@ -47,4 +47,13 @@ console.log(filterOutCape.length);
   const containAnyS = names.some((firstName) => firstName.includes(`S`));
   if (containAnyS) {
     console.log(names.map((firstName) => firstName.includes(`S`)));
-  }
+  };
+  
+  /* 
+  used the reduce method to create an object nameObj where the keys are the first names from the names array,
+  and the values are the corresponding provinces from the provinces array.
+ */
+const nameObj = names.reduce((obj, key, index) => {
+  obj[key] = provinces[index];
+  return obj;
+}, {});
