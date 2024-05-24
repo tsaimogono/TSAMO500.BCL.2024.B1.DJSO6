@@ -40,3 +40,11 @@ const filterOutCape = provinces.filter(
   (provinces) => !provinces.includes(`Cape`)
 );
 console.log(filterOutCape.length);
+/*
+  Used some method to check if any first name in the names array contains the letter "S".
+  If at least one name contains "S", it logs an array of booleans indicating which names contain ""
+ */
+  const containAnyS = names.some((firstName) => firstName.includes(`S`));
+  if (containAnyS) {
+    console.log(names.map((firstName) => firstName.includes(`S`)));
+  }
