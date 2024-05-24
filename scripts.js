@@ -85,3 +85,16 @@ console.log(
   products
     .filter((name) => name.product.length <= 5)
     .map((name) => name.product),
+/*
+Price Manipulation - Filters the products array to include only products price is a non-empty string or a number, 
+  then maps over the filtered array and converts the price property of each object to an integer using parseInt, 
+  and adds all the prices using the reduce method
+  */
+  products
+    .filter(
+      (product) =>
+        (typeof product.price === "string" && product.price.trim() !== "") ||
+        typeof product.price === "number"
+    )
+    .map((product) => parseInt(product.price))
+    .reduce((accumulator, currentPrice) => accumulator + currentPrice, 0),
