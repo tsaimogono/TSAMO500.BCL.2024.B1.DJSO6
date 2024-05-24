@@ -98,3 +98,10 @@ Price Manipulation - Filters the products array to include only products price i
     )
     .map((product) => parseInt(product.price))
     .reduce((accumulator, currentPrice) => accumulator + currentPrice, 0),
+
+    /* 
+  Concatenate Product Names - it Concatenates the product property of each object in the products array to a single string using the reduce method
+  */
+  products.reduce((productNames, product) => {
+    return productNames.concat(product.product);
+  }, ``),
