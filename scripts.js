@@ -78,3 +78,10 @@ console.log(
   Log Products - Maps over the products array and returns a new array with only the product property values
   */
   products.map((name) => name.product),
+    /* 
+  Filter by Name Length - Filters the products array to include only products product has a length of 5 or less,
+  and then maps over the filtered array to return a new array with only the product property values
+  */
+  products
+    .filter((name) => name.product.length <= 5)
+    .map((name) => name.product),
