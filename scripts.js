@@ -124,3 +124,12 @@ Price Manipulation - Filters the products array to include only products price i
     },
     { Highest: undefined, Lowest: undefined }
   ),
+  /*
+  Object Transformation - Transforms the products array into a new array of objects with name and cost properties using the reduce method. 
+  The name property is set to the product property value, and the cost property is set to the price property value
+  */
+  Object.entries(products).reduce((accumulator, [index, { product, price }]) => {
+    accumulator[index] = { name: product, cost: price };
+    return accumulator;
+  }, [])
+);
