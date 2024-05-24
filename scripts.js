@@ -34,3 +34,9 @@ console.log(nameLength);
 
 // logs a sorted version of the provinces array to the console using the sort method
 console.log(provinces.sort());
+
+// The filter method is used to create a new array filterOutCape that contains only provinces that do not include the word "Cape"
+const filterOutCape = provinces.filter(
+  (provinces) => !provinces.includes(`Cape`)
+);
+console.log(filterOutCape.length);
