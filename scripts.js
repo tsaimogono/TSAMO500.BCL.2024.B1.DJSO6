@@ -14,9 +14,13 @@ const products = [
   { product: 'tea', price: '' },
 ];
 
-// forEach
+// The forEach method iterate over the names and provinces arrays and log each element to the console
+names.forEach((firstName) => console.log(firstName));
 provinces.forEach((province) => console.log(province));
-names.forEach((name) => console.log(name));
-
-names.forEach((name, index) => console.log(`${name} (${provinces[index]})`)); // Assuming a matching index for names and provinces
-
+/* 
+ The forEach it iterate over the names array, but it logs each first name along with the corresponding
+ province from the provinces array using the index
+ */
+ names.forEach((firstName, index) =>
+  console.log(`${firstName} (${provinces[index]})`)
+);
